@@ -97,4 +97,11 @@ class DestinationController extends Controller
 
         return response()->json($destination, 200);
     }
+
+
+    public function fetch()
+    {
+        return Destination::with('services')->get(); // Retrieves all destinations with their services
+
+    }
 }

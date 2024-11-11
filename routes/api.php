@@ -22,3 +22,5 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
 
 Route::post('destinations', [DestinationController::class, 'store']);
 Route::get('destinations/{id}', [DestinationController::class, 'show']);
+Route::get('/fetchDestinations', [DestinationController::class, 'fetch']);
+
